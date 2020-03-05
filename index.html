@@ -5,10 +5,18 @@
         <title>Changy_Book</title>
         
         <button onclick="Toggle()">Click Me</button>
-        
+        <button onclick="Toggle2()">Click Me too</button>
             <script>
                 function Toggle() {
                   var x = document.getElementById("myDIV");
+                  if (x.style.display === "none") {
+                    x.style.display = "block";
+                  } else {
+                    x.style.display = "none";
+                  }
+                }
+                function Toggle2() {
+                  var x = document.getElementById("myDIV2");
                   if (x.style.display === "none") {
                     x.style.display = "block";
                   } else {
@@ -21,10 +29,17 @@
         <style>
         #myDIV {
           width: 100%;
-          padding: 50px 0;
+          padding: 20px 0;
           text-align: center;
           background-color: lightblue;
-          margin-top: 20px;
+          margin-top: 10px;
+        }
+        #myDIV2 {
+          width: 100%;
+          padding: 20px 0;
+          text-align: center;
+          background-color: lightblue;
+          margin-top: 10px;
         }
         </style>
     </head>
@@ -32,6 +47,9 @@
 
             <div id="myDIV" style="display: none;">
                 This is my DIV element.
+            </div>
+            <div id="myDIV2" style="display: none;">
+                This is my other DIV element.
             </div>
 
 
